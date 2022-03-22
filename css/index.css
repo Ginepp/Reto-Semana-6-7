@@ -1,0 +1,67 @@
+* {
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colors-white: rgb(255, 255, 255); /*color banner*/
+    --colors-silver: rgb(218, 218, 218); /*color text nav*/
+}
+
+body {
+        background-image: url(../img/banner/banner1.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100%;
+      }
+
+
+/* Navegacion*/
+header {
+    padding: 0px 2.5rem;
+    max-width: 77.5rem;
+    line-height: 87px;
+}
+nav {
+    display: flex;
+    text-align: right;
+}
+
+.nav-menu {
+    width: 100%;
+    height: 0vh;
+    text-align: right;
+}
+
+.nav-menu a {
+    color: var(--colors-silver);
+}
+
+.menu-login {
+    display: none;
+}
+
+
+.menu-explore a {
+    font-weight: 800;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    padding: 0 16px 16px;
+    border: solid;
+    margin-left: 75px;
+}
+
+
+/* banner-principal*/
+.banner-principal {
+   color: var(--colors-silver);
+   display: none;
+}
+
+@media screen and (min-width: 968px) {
+    
+}
