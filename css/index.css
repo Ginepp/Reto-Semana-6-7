@@ -1,0 +1,274 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    background-color: #f6efe8;
+}
+
+:root {
+    scroll-behavior: smooth;
+    --theme-color: #fff;
+    --text-color: #000;
+    --box-shadow: #21242c80;
+    --code-color: #282c34;
+    --button-color: #61dafb;
+    --inverse-theme-color: #20232a;
+    --inverse-text-color: #fff;
+    --padding-container: 0 2rem;
+    --all-transitions: all 0.25s;
+}
+
+body {
+    margin: 0; 
+    min-height: 100vh;
+    max-width: 100%;
+}
+
+
+.header {
+    background-color: var(--theme-color);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 0.25rem 0;
+    box-shadow: 0 0.25rem 0.25rem 0 var(--box-shadow);
+    transition: var(--all-transitions);
+}
+
+.header--scroll {
+    background-color: var(--inverse-theme-color);
+    padding: 0;
+    box-shadow: none;
+}
+
+/*Section Nav*/
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    padding: var(--padding-container);
+}
+
+.header-nav__link-logo-container {
+    height: 1.5rem;
+}
+
+.header-nav__link-logo {
+    height: 100%;
+    
+}
+
+.header-nav__menu-icon-container {
+    height: 1rem;
+    cursor: pointer;
+    margin: 0;
+}
+
+.header-nav__menu-icon {
+    height: 100%;
+}
+
+.header-nav__menu-icon>path {
+    transition: var(--all-transitions);
+}
+
+.header-nav__menu-icon--scroll>path {
+    stroke: var(--theme-color);
+}
+
+.header-nav__link-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 4rem;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--code-color);
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+    transition: var(--all-transitions);
+}
+
+.header-nav__link-list--left-0 {
+    left: 0;
+}
+
+.header-nav__link-item {
+    list-style: none;
+}
+
+.header-nav__link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--inverse-text-color);
+    transition: all 0.25s;
+}
+
+/*seccion banner*/
+.main-text{
+    font-weight: 700;
+    line-height: 1.0625;
+    letter-spacing: -1.5px;
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+}
+
+.billboard-container{
+    flex-wrap: wrap;
+    padding: 0 4vw;
+    align-items: flex-start;
+    grid-gap: normal;
+    justify-content: space-between;
+}
+
+.billboard-header-copy{
+    font-weight: 400;
+    line-height: 1.333;
+    letter-spacing: -.2px;
+    margin-top: 0;
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+}
+
+.billboard-btn-container{
+    display: grid;
+    gap: 0.5rem!important;
+}
+
+.billboard-btn {
+    color: #FFF;
+    appearance: none;
+    background: 0 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.2857;
+    letter-spacing: .8px;
+    font-size: .875rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 19px 40px 20px;
+    display: block;
+    width: 100%;
+    transition: box-shadow 420ms;
+
+}
+
+.btn-free{
+    background-color: #611f69 !important;
+    
+}
+
+.btn-google{
+    background-color: #4285f4 !important;
+}
+
+.illustration-image{
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.companies-container{
+    padding: 0 8vw;
+}
+
+.companies-container-logos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-item{
+    max-width: 170px;
+    margin: 10px;
+    text-align: center;
+}
+
+.logo-image{
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 854px) {
+
+    .header-nav {
+        max-width: 641px;
+        margin: 7px 112px 0;
+    }
+
+    .header-nav__menu-icon {
+        display: none;
+    }
+
+    .header-nav__link-list {
+        margin: 0px 0px -5px;
+        position: static;
+        flex-direction: row;
+        width: auto;
+        background-color: inherit;
+        gap: 1.5rem;
+    }
+
+    .header-nav__link {
+        font-size: 1rem;
+        color: var(--text-color);
+    }
+
+    .header-nav__link--scroll {
+        color: var(--inverse-text-color);
+    }
+
+    /*section banner*/
+    .billboard-container{
+        margin: 0 8vw;
+        display: grid;
+        grid-column-gap: 5%;
+        grid-template-columns: 40% 55%;
+        align-items: center;
+        justify-items: self-end;
+    }
+
+    .main-text{
+        font-size: 4rem;
+    }
+
+    .billboard-btn-container{
+        display: block;
+    }
+
+    .btn-free{
+        display: inline-block;
+        white-space: nowrap;
+        flex-basis: auto;
+        width: auto;
+    }
+
+    .btn-google{
+        display: inline-block;
+        white-space: nowrap;
+        flex-basis: auto;
+        width: auto;
+    }
+
+}
+
+@media only screen and (min-width: 0) and (max-width: 1023px){
+    .btn-google {
+        margin-top: 0.5rem;
+    }
+
+    .companies-container{
+        padding: 0 4vw;
+    }
+}
