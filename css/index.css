@@ -1,9 +1,9 @@
 * {
-    padding: 0;
+   
     margin: 0;
     text-decoration: none;
     list-style: none;
-    background-color: #f6efe8;
+    
 }
 
 :root {
@@ -23,6 +23,7 @@ body {
     margin: 0; 
     min-height: 100vh;
     max-width: 100%;
+    
 }
 
 
@@ -35,6 +36,7 @@ body {
     padding: 0.25rem 0;
     box-shadow: 0 0.25rem 0.25rem 0 var(--box-shadow);
     transition: var(--all-transitions);
+    background-color: #f6efe8;
 }
 
 .header--scroll {
@@ -50,6 +52,7 @@ body {
     justify-content: space-between;
     height: 4rem;
     padding: var(--padding-container);
+    background-color: #f6efe8;
 }
 
 .header-nav__link-logo-container {
@@ -112,13 +115,19 @@ body {
     transition: all 0.25s;
 }
 
+.button-container{
+    display: none;
+}
+
 /*seccion banner*/
 .main-text{
-    font-weight: 700;
+    font-weight: 650;
     line-height: 1.0625;
     letter-spacing: -1.5px;
     font-size: 2.75rem;
+    font-family: revert;
     margin-bottom: 1rem;
+    color: #000;
 }
 
 .billboard-container{
@@ -200,6 +209,113 @@ body {
     height: auto;
 }
 
+/*section features*/
+
+.section-feature-container{
+    margin: 0 auto;
+    padding: 0 4vw;
+    display: grid;
+    grid-template-columns: 100%;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+}
+
+.feature-link{
+    line-height: 1.4444;
+    letter-spacing: normal;
+    font-size: 1.125rem;
+    /* display: inline-block; */
+    margin-bottom: 0;
+    font-weight: 400;
+    text-decoration: none;
+    color: #1264a3;
+    cursor: pointer;
+    display: inline;
+    
+}
+
+.feature-title{
+    font-weight: 700;
+    line-height: 1.1875;
+    letter-spacing: -.3px;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-copy{
+    font-weight: 400;
+    line-height: 1.4444;
+    letter-spacing: normal;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+.feature-link::after{
+    background-image: url(/img/right-arrow.svg);
+    content: '';
+    width: 19px;
+    height: 13px;
+    display: inline-block;
+    margin-left: 0.5em;
+}
+
+.video-snippet-container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 1rem 30px;
+    margin-top: 2rem;
+    max-width: 480px;
+}
+
+.video-snippet{
+    display: flex;
+    flex-direction: column;
+}
+
+.video-showcase-link{
+    border-bottom: none;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+}
+
+.video-showcase-icon{
+    left: unset;
+    top: unset;
+    right: 15px;
+    bottom: 18px;
+    transform: unset;
+}
+
+.video-image{
+    border-radius: 6px;
+    width: 100%;
+}
+
+.video-snippet-caption{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: .875rem;
+}
+
+.video-snippet-caption-title{
+    font-weight: 700;
+}
+
+.video-snippet-caption-time{
+    font-weight: 700;
+}
+
+.hide-on-mobile{
+    display: none;
+}
+
+/*card-registration*/
+.registration-section {
+    background-color: #f6efe8;
+}
 @media (min-width: 854px) {
 
     .header-nav {
@@ -212,7 +328,7 @@ body {
     }
 
     .header-nav__link-list {
-        margin: 0px 0px -5px;
+        margin: 0px 40px -5px;
         position: static;
         flex-direction: row;
         width: auto;
@@ -229,7 +345,46 @@ body {
         color: var(--inverse-text-color);
     }
 
+    .button-container {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .button-sesion {
+        border: none;
+        margin: 0px 20px 0px 116px;
+        font-weight: 500;
+    }
+    .button-buy{
+        margin: 0px 0px 0px 8px;
+        padding: 7px 16px;
+        color: #611f69;
+        font-size: 14px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-weight: 500;
+        border-color: #611f69;
+    }
+    .button-buy:hover {
+        box-shadow: inset 0 0 0 1px #611f69;
+    }
+
+    .button-free-trial{
+        margin: 0px 0px 0px 8px;
+        font-size: 14px;
+        font-weight: 500;
+        background-color: #611f69;
+        border-radius: 5px;
+        padding: 7px 16px;
+        color: white;
+        text-transform: uppercase;
+    }
+
     /*section banner*/
+    .billboard {
+        background-color: #f6efe8;
+    }
     .billboard-container{
         margin: 0 8vw;
         display: grid;
@@ -237,14 +392,19 @@ body {
         grid-template-columns: 40% 55%;
         align-items: center;
         justify-items: self-end;
+        padding: 0px 1vw;
     }
 
+    .billboard-header {
+        margin-top: 75px;
+    }
     .main-text{
-        font-size: 4rem;
+        font-size: 56px;
     }
 
     .billboard-btn-container{
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
 
     .btn-free{
@@ -260,6 +420,77 @@ body {
         flex-basis: auto;
         width: auto;
     }
+
+    /*section feature*/
+
+    .section-feature-container{
+        margin-left: 8vw;
+        margin-right: 8vw;
+    }
+
+    .section-feature-container{
+        grid-template-columns: 40.24390244% 48.7804878%;
+        justify-items: flex-end;
+        grid-column-gap: 10.97560976%;  
+    }
+
+    .hide-on-mobile{
+        display: block;
+    }
+
+    .video-snippet-container{
+        grid-template-columns: repeat(2,minmax(50%,225px));
+    }
+
+    .feature-title{
+        font-size: 2rem;
+    }
+
+    .feature-copy{
+        font-size: 1.125rem;
+    }
+
+    .video-features{
+        max-height: 450px;
+    }
+
+    .second-video-feature{
+        justify-items: baseline;
+    }
+
+    /*section registratio*/
+
+    .title-registration-container { 
+        font-weight: 700;
+        font-size: 2.375rem;
+    }
+    .registration-container{
+        text-align: center;
+        padding-top: 96px;
+        
+    }
+
+    .card-registration{
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 0 80px;
+    }
+
+    .cards {
+        margin: 80px;
+        width: 285px;
+        font-size: 17px;
+        font-family: revert;
+    }
+
+    .title-cards{
+        font-weight: 700;
+    }
+    .box-image {
+        width: 45px;
+    }
+
 
 }
 
