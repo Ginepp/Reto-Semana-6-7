@@ -313,9 +313,34 @@ body {
 }
 
 /*card-registration*/
+.registration-container{
+    padding-top: 21px;
+}
 .registration-section {
     background-color: #f6efe8;
+    gap: 3rem;
 }
+.title-registration-container { 
+    font-weight: 600;
+    font-size: 30px;
+    margin: 24px 24px;
+    padding-top: 15px;
+}
+
+.cards {
+    margin: 30px;
+    width: 285px;
+    font-size: 17px;
+    font-family: revert;
+}
+
+.title-cards{
+    font-weight: 700;
+}
+.box-image {
+    width: 45px;
+}
+
 @media (min-width: 854px) {
 
     .header-nav {
@@ -458,7 +483,7 @@ body {
         justify-items: baseline;
     }
 
-    /*section registratio*/
+    /*card registration*/
 
     .title-registration-container { 
         font-weight: 700;
@@ -487,10 +512,63 @@ body {
     .title-cards{
         font-weight: 700;
     }
+    .title-cards a{
+        color: #09395e;
+        text-decoration: none;
+        border-bottom: 1px solid #0d3b5f;
+    }
+
     .box-image {
         width: 45px;
     }
 
+    /*seccion card*/
+
+    .content_card__image {
+        width: 250px;
+        height: 200px;
+    }
+
+    .cards-contenedor-promociones {
+        text-align: center;
+        padding: 152px;
+        font-size: 20px;
+        font-weight: 600;
+        background-color: #f6efe8;
+        margin-top: -161px;
+    }
+
+    .content_cards {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+       margin: 30px;
+    }
+
+    .card {
+        text-align: left;
+        margin: 10px;
+        padding: 2px;
+        
+    }
+    .card-title {
+        text-align: left;
+    }
+
+   /*footer*/
+   .footer-container{
+    background: #4a154b;
+    border: none;
+    clip-path: ellipse(75% 100% at center top);
+    height: auto;
+    min-height: 370px;
+    justify-content: center;
+    align-items: center;
+   }
+   .footer-banner-container {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+   }
 
 }
 
